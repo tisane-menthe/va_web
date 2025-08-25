@@ -83,6 +83,9 @@ a {
     box-sizing: border-box;    /* prevents padding from adding extra width */
     font-size: 1rem;
     z-index: 1000;
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 
 }
 
@@ -95,6 +98,10 @@ a {
 .nav-right {
     display: flex;
     gap: 2rem;
+    padding-right: 1rem;
+}
+.nav-left {
+    padding-right: 1rem;
 }
 
 
