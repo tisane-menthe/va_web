@@ -51,5 +51,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // const navRight = document.querySelector(".nav-right");
+    // const sections = document.querySelectorAll("section");
+    //
+    // sections.forEach(section => {
+    //     const id = section.id;
+    //     const title = section.querySelector("h1, h2, h3")?.innerText || id;
+    //
+    //     if (id) {
+    //         const link = document.createElement("a");
+    //         link.href = `#${id}`;
+    //         link.textContent = title;
+    //         navRight.appendChild(link);
+    //     }
+    // });
+
 });
 
