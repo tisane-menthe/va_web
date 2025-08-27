@@ -12,7 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cards.forEach(card => {
         const text = card.querySelector('.card-text');
-        const items = JSON.parse(card.dataset.submenu);
+        // const items = JSON.parse(card.dataset.submenu);
+        const items_raw = card.dataset.submenu;
+        const items = JSON.parse(items_raw.replace(/'/g, '"')); // convert ' → "
+
 
         text.addEventListener('click', (e) => {
             // Clear previous submenu items

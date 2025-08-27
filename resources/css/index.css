@@ -46,7 +46,7 @@ h1 {
 }
 
 img {
-    filter: brightness(0) invert(1);
+    /*filter: brightness(0) invert(1);*/
 }
 
 section {
@@ -61,6 +61,7 @@ a {
     color: black;
     font-weight: bold;
 }
+
 .card-subindex a {
     text-decoration: none;
     color: #9eff1f;
@@ -95,6 +96,7 @@ a {
     border-left: solid 1px orangered;
     border-right: solid 1px orangered;
 }
+
 .nav-right {
     display: flex;
     gap: 2rem;
@@ -103,14 +105,6 @@ a {
 .nav-left {
     padding-right: 1rem;
 }
-
-
-/*.navbar p {*/
-/*    color: orangered;*/
-/*    margin: 0;   !* remove default <p> margins *!*/
-/*    font-size: 1rem;*/
-/*    padding-right: 1rem;*/
-/*}*/
 
 .title-homepage {
     /*font-family: "Titan One", serif;*/
@@ -132,14 +126,12 @@ a {
     padding-bottom: 2.4rem;
     z-index: 5;
 }
-
-
 .title2-section {
     font-size: 3rem;
     position: relative;
     top: 0.2rem;
     margin: 0 auto;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     z-index: 5;
 }
 
@@ -226,6 +218,17 @@ a {
     gap: 50px;
 }
 
+@media (min-width: 600px) {
+    .corps-two-column-thin-right.variant-1 > :nth-child(2),
+    .corps-three-columns.variant-1 > :nth-child(2) {
+        margin-top: 4rem;
+    }
+    .corps-two-column-thin-right.variant-1 > :nth-child(5n),
+    .corps-three-columns.variant-1 > :nth-child(5n) {
+        margin-top: 5rem;
+    }
+}
+
 .corps-one-column-thin-right {
     width: 60%;
     margin-left: 5rem;
@@ -233,6 +236,28 @@ a {
 
 .corps-one-column-wide {
     width: 85%;
+}
+
+.corps-three-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0.35fr));
+    grid-gap: 3rem;
+    /*grid-row-gap: 4rem;*/
+    font-size: 0.9rem;
+}
+
+.corps-two-column-thin-right img,
+.corps-three-columns img{
+    width: 120%;
+}
+.corps-para-border {
+    border: 0.1rem solid black;
+}
+
+@media (min-width: 600px) {
+    .corps-align-down {
+        align-self: end;
+    }
 }
 
 .quote {
@@ -283,5 +308,19 @@ a {
     .nav-right {
         gap: 0.5rem;
     };
+
+    /* For images in grid shifted to the right */
+    .corps-two-column-thin-right img{
+        width: 90vw;          /* span the entire viewport width */
+        max-width: none;       /* don’t restrict it */
+        margin-left: -10%;    /* cancel out body/container margin */
+    }
+    /* rest */
+    .corps-three-columns img{
+        width: 100vw;          /* span the entire viewport width */
+        max-width: none;       /* don’t restrict it */
+        margin-left: -10%;    /* cancel out body/container margin */
+    }
+
 
 }
