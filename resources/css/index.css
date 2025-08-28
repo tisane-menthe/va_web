@@ -46,7 +46,6 @@ h1 {
 }
 
 img {
-    /*filter: brightness(0) invert(1);*/
 }
 
 section {
@@ -134,7 +133,15 @@ a {
     padding-bottom: 2rem;
     z-index: 5;
 }
+.title3-section {
+    font-size: 1.5rem;
+    top: 0.2rem;
+}
 
+.subtitle-section {
+    font-size: 1.6rem;
+    font-style: italic;
+}
 .wrapper-index {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -156,6 +163,7 @@ a {
     z-index: 10;
 }
 
+/* background image img for the landing-page cards */
 .card-bg {
     position: absolute;
     z-index: 0;
@@ -165,6 +173,7 @@ a {
     left: 50%;
     transform: translate(-50%, -50%); /* center on the middle of the card */
     pointer-events: none; /* so it doesn’t block mouse events on the text */
+    filter: brightness(0) invert(1);
 }
 
 .card-subindex {
@@ -218,6 +227,7 @@ a {
     gap: 50px;
 }
 
+/* We need the alternating offsets only when there are columns, so only on laptop....*/
 @media (min-width: 600px) {
     .corps-two-column-thin-right.variant-1 > :nth-child(2),
     .corps-three-columns.variant-1 > :nth-child(2) {
@@ -226,6 +236,29 @@ a {
     .corps-two-column-thin-right.variant-1 > :nth-child(5n),
     .corps-three-columns.variant-1 > :nth-child(5n) {
         margin-top: 5rem;
+    }
+    .corps-one-column-wave {
+        display:grid;
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+    .corps-one-column-wave > * {
+        transition: transform 0.3s ease;
+    }
+
+    /* Default (left) */
+    .corps-one-column-wave > :nth-child(4n + 1),
+    .corps-one-column-wave > :nth-child(4n + 5) {
+        transform: translateX(0);
+    }
+
+    /* Right-aligned group (2nd, 3rd, 4th in each cycle) */
+    .corps-one-column-wave > :nth-child(4n + 2),
+    .corps-one-column-wave > :nth-child(4n + 4) {
+        transform: translateX(3rem);
+    }
+    .corps-one-column-wave > :nth-child(4n + 3) {
+        transform: translateX(6rem);
     }
 }
 
@@ -252,7 +285,18 @@ a {
 }
 .corps-para-border {
     border: 0.1rem solid black;
+    padding: 1rem;
 }
+
+.corps-left-offset {
+    margin-left: 2rem;
+}
+
+.img-full-width {
+    width: 100%;
+    padding: 4rem 0 4rem 0;
+}
+
 
 @media (min-width: 600px) {
     .corps-align-down {
@@ -262,6 +306,8 @@ a {
 
 .quote {
     font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 3rem;
 }
 
 
