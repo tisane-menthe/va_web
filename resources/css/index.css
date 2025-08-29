@@ -138,10 +138,20 @@ a {
     top: 0.2rem;
 }
 
-.subtitle-section {
+.subtitle1-section {
     font-size: 1.6rem;
     font-style: italic;
 }
+.subtitle2-section {
+    font-size: 1.2rem;
+}
+
+.title-subsection {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .wrapper-index {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -240,7 +250,8 @@ a {
     .corps-one-column-wave {
         display:grid;
         grid-template-columns: 1fr;
-        width: 80%;
+        max-width: 50rem;
+        padding-right: 2rem;
     }
     .corps-one-column-wave > * {
         transition: transform 0.3s ease;
@@ -280,7 +291,8 @@ a {
 }
 
 .corps-two-column-thin-right img,
-.corps-three-columns img{
+.corps-three-columns img,
+.corps-two-column-left img{
     width: 120%;
 }
 .corps-para-border {
@@ -294,13 +306,16 @@ a {
 
 .img-full-width {
     width: 100%;
-    padding: 4rem 0 4rem 0;
+    padding: 2rem 0 2rem 0;
 }
 
 
 @media (min-width: 600px) {
     .corps-align-down {
         align-self: end;
+    }
+    .corps-align-middle{
+        align-self: center;
     }
 }
 
@@ -361,11 +376,21 @@ a {
         max-width: none;       /* don’t restrict it */
         margin-left: -10%;    /* cancel out body/container margin */
     }
-    /* rest */
+
     .corps-three-columns img{
-        width: 100vw;          /* span the entire viewport width */
-        max-width: none;       /* don’t restrict it */
-        margin-left: -10%;    /* cancel out body/container margin */
+        width: 100vw;
+        max-width: none;
+        margin-left: -10%;
+    }
+
+    .quote {
+        font-size: 1.4rem;
+    }
+    .title1-section{
+        font-size: 3rem;
+    }
+    .title2-section {
+        font-size: 2rem;
     }
 
 
