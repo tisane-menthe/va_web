@@ -37,7 +37,6 @@
 
 /* STYLE */
 body {
-    margin: 5rem 15% 0 15%;
     font-family: Umprum, Arial, sans-serif;
     background-color: #a9c398;
 }
@@ -61,6 +60,13 @@ a {
     font-weight: bold;
 }
 
+li {
+    margin-bottom: 0.5rem;
+}
+
+.inside-body {
+    margin: 5rem 15% 0 15%;
+}
 .card-subindex a {
     text-decoration: none;
     color: #9eff1f;
@@ -86,7 +92,6 @@ a {
     font-size: 1.2rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-
 }
 
 .navbar a{
@@ -141,9 +146,11 @@ a {
 .subtitle1-section {
     font-size: 1.6rem;
     font-style: italic;
+    line-height: 1.05;
 }
 .subtitle2-section {
     font-size: 1.2rem;
+    line-height: 1.05;
 }
 
 .title-subsection {
@@ -308,7 +315,9 @@ a {
     width: 100%;
     padding: 2rem 0 2rem 0;
 }
-
+.img-banner {
+    width: 100vw;
+}
 
 @media (min-width: 600px) {
     .corps-align-down {
@@ -321,7 +330,7 @@ a {
 
 .quote {
     font-size: 1.6rem;
-    line-height: 1.2;
+    line-height: 1.1;
     margin-bottom: 3rem;
 }
 
@@ -330,7 +339,7 @@ a {
     .title-homepage {
         font-size: 3.5rem;
     }
-    body{
+    .inside-body{
         margin: 3rem 10% 0 10%;
     }
 
