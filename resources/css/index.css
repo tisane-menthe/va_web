@@ -301,6 +301,7 @@ li {
 .corps-three-columns img,
 .corps-two-column-left img{
     width: 120%;
+    height: auto;
 }
 .corps-para-border {
     border: 0.1rem solid black;
@@ -313,6 +314,11 @@ li {
 
 .img-full-width {
     width: 100%;
+    padding: 2rem 0 2rem 0;
+}
+
+.img-mid-width {
+    width: 80%;
     padding: 2rem 0 2rem 0;
 }
 .img-banner {
