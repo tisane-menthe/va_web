@@ -36,9 +36,32 @@
 }
 
 /* STYLE */
+
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* stop horizontal scrollbar */
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
     font-family: Umprum, Arial, sans-serif;
     background-color: #a9c398;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* stop horizontal scrollbar */
+
 }
 h1 {
     font-size: 2rem;
@@ -284,7 +307,7 @@ li {
 .index-section {
     font-size: 4rem;
     margin-bottom: 4rem;
-    border-bottom: 1rem solid #9eff1f;
+    border-bottom: 1rem solid orangered;
     padding: 14px;
 }
 
@@ -297,6 +320,33 @@ li {
 
 .faq {
     font-size: 1.2rem;
+}
+
+.title4-section {
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 1px;
+}
+
+
+.footer-scroll {
+    /*position: fixed;*/
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: black;
+    color: #9eff1f;
+    overflow: hidden;
+    white-space: nowrap;
+    /*padding: 0.5rem 2rem;*/
+    margin-bottom: 0;
+    padding: 0.5rem 0;
+}
+
+.credits {
+    font-size: 0.7rem;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 

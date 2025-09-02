@@ -78,5 +78,26 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     // });
 
+    const ticker = document.querySelector('.credits');
+    const text = ticker.innerHTML;
+
+// duplicate text until it’s wide enough
+    while (ticker.scrollWidth < window.innerWidth * 2) {
+        ticker.innerHTML += text;
+    }
+
+// animate with CSS variable
+    let offset = 0;
+    function scroll() {
+        offset -= 1;
+        if (Math.abs(offset) >= ticker.scrollWidth / 2) {
+            offset = 0;
+        }
+        ticker.style.transform = `translateX(${offset}px)`;
+        requestAnimationFrame(scroll);
+    }
+    scroll();
+
+
 });
 
