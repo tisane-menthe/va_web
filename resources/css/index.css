@@ -46,8 +46,7 @@ h1 {
 
 img {
 }
-
-section {
+.section-big section{
     scroll-margin-top: 5rem;
     margin-bottom: 6rem;
 }
@@ -296,6 +295,11 @@ li {
 .index-section a:hover {
     font-style: italic;
 }
+
+.faq {
+    font-size: 1.2rem;
+}
+
 
 /* We need the alternating offsets only when there are columns, so only on laptop....*/
 @media (min-width: 600px) {
