@@ -46,7 +46,7 @@ h1 {
 
 img {
 }
-.section-big section{
+.section-big {
     scroll-margin-top: 5rem;
     margin-bottom: 6rem;
 }
@@ -89,10 +89,8 @@ li {
     font-size: 1rem;
     z-index: 1000;
     font-size: 1.2rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
     transform: translateY(-100%);
-    border: solid 1px orangered;
+    border: solid 1px #f68e56;
 }
 
 .navbar.visible {
@@ -114,6 +112,7 @@ li {
 }
 .nav-left {
     padding-right: 1rem;
+    padding-left:1rem;
 }
 
 .title-homepage {
@@ -287,8 +286,8 @@ li {
     margin-bottom: 4rem;
     border-bottom: 1rem solid #9eff1f;
     padding: 14px;
-
 }
+
 .index-section a {
     text-decoration: none;
 }
@@ -408,6 +407,24 @@ li {
     font-style: italic;
 }
 
+.footer {
+    display: flex;
+    justify-content: space-between; /* spread across row */
+    margin-top: 8rem;
+    padding: 20px;
+}
+
+.footer-box {
+    flex: 1; /* each box takes equal space */
+    text-align: center; /* center text horizontally */
+    color: black;
+    padding: 10px;
+    text-decoration-line: underline;
+    text-decoration-color: orangered;
+    text-decoration-thickness: 2px;
+}
+
+
 @media (max-width: 480px) {
     .title-homepage {
         font-size: 3.5rem;
@@ -418,12 +435,12 @@ li {
 
     .wrapper-index {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        grid-gap: 1.6rem;
-        font-size: 1.5rem;
+        grid-gap: 1.8rem;
+        font-size: 1.2rem;
     }
 
     .card-bg {
-        width: 13rem;
+        width: 15rem;
         height: auto;
     }
     .corps-two-column-left,
@@ -473,6 +490,9 @@ li {
     }
     .title2-section {
         font-size: 2rem;
+    }
+    .index-section {
+        font-size: 3rem;
     }
 
 
