@@ -141,8 +141,6 @@ li {
 .navbar a{
     text-decoration: none;
     color: orangered;
-    border-left: solid 1px orangered;
-    border-right: solid 1px orangered;
 }
 
 .nav-right {
@@ -150,9 +148,15 @@ li {
     gap: 2rem;
     padding-right: 1rem;
 }
+
+.nav-right a {
+    padding: 0 0 0 0.4rem;
+    border-left: solid 1px orangered;
+}
+
 .nav-left {
     padding-right: 1rem;
-    padding-left:1rem;
+    padding-left: 1rem;
 }
 
 .title-homepage {
@@ -177,6 +181,14 @@ li {
     padding-bottom: 2.4rem;
     z-index: 5;
 }
+
+.index-section {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    border-bottom: 1rem solid orangered;
+    padding: 14px;
+}
+
 .title2-section {
     font-size: 3rem;
     position: relative;
@@ -190,6 +202,7 @@ li {
     font-size: 1.5rem;
     top: 0.2rem;
 }
+
 
 .subtitle1-section {
     font-size: 1.6rem;
@@ -346,13 +359,6 @@ li {
     margin-bottom: -1rem;
 }
 
-.index-section {
-    font-size: 4rem;
-    margin-bottom: 4rem;
-    border-bottom: 1rem solid orangered;
-    padding: 14px;
-}
-
 .index-section a {
     text-decoration: none;
 }
@@ -382,7 +388,7 @@ li {
     white-space: nowrap;
     /*padding: 0.5rem 2rem;*/
     margin-bottom: 0;
-    padding: 0.5rem 0;
+    padding: 0.3rem 0;
 }
 
 .credits {
@@ -394,6 +400,7 @@ li {
 
 /* We need the alternating offsets only when there are columns, so only on laptop....*/
 @media (min-width: 600px) {
+
 
     .corps-two-column-thin-right.variant-1 > :nth-child(2),
     .corps-three-columns.variant-1 > :nth-child(2) {
@@ -485,10 +492,6 @@ li {
     width: 100vw;
 }
 
-@media (min-width: 600px) {
-
-}
-
 .quote {
     font-size: 1.6rem;
     line-height: 1.1;
@@ -538,13 +541,30 @@ li {
 
 
 @media (max-width: 480px) {
-    .footer {
-        font-size: 0.8rem;
-        gap: 2rem;
+    .nav-left {
+        padding-left: 0.1rem;
+        padding-right: 0.4rem;
+    }
+    .logo {
+        right: 1rem;
+        height: 3rem;
     }
     .bg-illus {
         width: 10rem;
     }
+
+    .illus-1 { top: -1rem; left: 0rem; }
+    .illus-2 { top: 2rem; left: 1rem; }
+    .illus-3 { bottom: 5rem; left: -5rem; }
+    .illus-4 { top: 30rem; right: 1rem; width: 8rem;}
+    .illus-5 { bottom: 7rem; left: 0.1rem;}
+    .illus-6 { display: none; }
+
+    .footer {
+        font-size: 0.8rem;
+        gap: 2rem;
+    }
+
     .title-homepage {
         font-size: 3.5rem;
     }
@@ -611,7 +631,7 @@ li {
         font-size: 2rem;
     }
     .index-section {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
 
