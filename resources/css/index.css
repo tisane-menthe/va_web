@@ -40,7 +40,7 @@
 html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* stop horizontal scrollbar */
+    overflow-x: hidden;
 }
 
 footer {
@@ -53,7 +53,7 @@ body {
     background-color: #a9c398;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* stop horizontal scrollbar */
+    overflow-x: hidden;
     position: relative;
 
 }
@@ -66,6 +66,26 @@ h1 {
     position: absolute;
     z-index: -1; /* keep behind content */
     width: 17rem;
+    pointer-events: auto;
+}
+
+.bg-illus:hover {
+    opacity: 0.1;
+    animation: shake 0.5s ease-in-out 2s;
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    10% { transform: translate(-2px, 1px) rotate(-1deg); }
+    20% { transform: translate(2px, -1px) rotate(1deg); }
+    30% { transform: translate(-1px, 2px) rotate(-0.5deg); }
+    40% { transform: translate(1px, -2px) rotate(0.5deg); }
+    50% { transform: translate(-1px, 1px) rotate(-0.5deg); }
+    60% { transform: translate(1px, -1px) rotate(0.5deg); }
+    70% { transform: translate(-1px, 1px) rotate(-0.5deg); }
+    80% { transform: translate(1px, -1px) rotate(0.5deg); }
+    90% { transform: translate(-1px, 0px) rotate(-0.2deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
 }
 
 .illus-1 { top: -0.5rem; left: 0rem; }
@@ -77,9 +97,10 @@ h1 {
 
 
 
+
 .logo {
     position: absolute;
-    z-index: -1; /* keep behind content */
+    z-index: 1000; /* keep behind content */
     top: 1rem;
     right: 2rem;
     height: 4rem;
@@ -187,6 +208,9 @@ li {
     margin-bottom: 4rem;
     border-bottom: 1rem solid orangered;
     padding: 14px;
+}
+.index-section br{
+    margin-bottom: 0.3rem;
 }
 
 .title2-section {
@@ -484,12 +508,17 @@ li {
     padding: 2rem 0 2rem 0;
 }
 
+.img-mobile {
+    display: none;
+}
+
 .img-mid-width {
     width: 80%;
     padding: 2rem 0 2rem 0;
 }
 .img-banner {
     width: 100vw;
+    margin-bottom: 1rem;
 }
 
 .quote {
@@ -538,9 +567,20 @@ li {
     text-decoration: none;
 }
 
-
+.image-mobile {
+    display: none;
+}
 
 @media (max-width: 480px) {
+
+    .image-pc {
+        display: none;
+    }
+    .image-mobile {
+        display: block;
+        width: 94vw;
+        margin-left: -1.5rem; /* cancels inside-body margin */
+    }
     .nav-left {
         padding-left: 0.1rem;
         padding-right: 0.4rem;
@@ -589,8 +629,10 @@ li {
     }
     .corps-one-column-thin-right,
     .corps-two-column-thin-right {
-        width: 80%;
-        margin-left: 2rem;
+        width: 70%;
+        padding-left: 1.5rem;
+        margin-left: 0;
+        overflow-wrap: break-word;
     }
     .corps-one-column-wide {
         width: 100%;
@@ -621,17 +663,29 @@ li {
         margin-left: -10%;
     }
 
+    .corps-three-columns {
+        grid-gap: 1rem;
+    }
+
     .quote {
         font-size: 1.4rem;
     }
     .title1-section{
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
     .title2-section {
         font-size: 2rem;
     }
     .index-section {
-        font-size: 2rem;
+        font-size: 2.6rem;
+    }
+    .section-big {
+        scroll-margin-top: 2.3rem;
+        margin-bottom: 3rem;
+    }
+
+    .subtitle1-section {
+        font-size: 1.4rem;
     }
 
 
